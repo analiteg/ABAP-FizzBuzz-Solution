@@ -14,7 +14,7 @@ CLASS zcl_fizz_buzz IMPLEMENTATION.
 
   METHOD if_oo_adt_classrun~main.
     TRY.
-        out->write( lcl_fizzbuzz=>create( )->run( 100 ) ).
+        out->write( lcl_fizz_buzz=>create( )->run( 100 ) ).
       CATCH cx_root INTO DATA(exc).
         out->write( exc->get_text(  ) ).
     ENDTRY.
