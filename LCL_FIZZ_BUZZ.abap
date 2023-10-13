@@ -1,10 +1,10 @@
-CLASS lcl_fizzbuzz  DEFINITION CREATE PRIVATE.
+CLASS lcl_fizz_buzz  DEFINITION CREATE PRIVATE.
 
   PUBLIC SECTION.
 
     CLASS-METHODS: create
       RETURNING
-        VALUE(ro_fizzbuzz) TYPE REF TO lcl_fizzbuzz.
+        VALUE(ro_fizzbuzz) TYPE REF TO lcl_fizz_buzz.
 
     METHODS: run
       IMPORTING lv_number          TYPE i
@@ -16,10 +16,10 @@ CLASS lcl_fizzbuzz  DEFINITION CREATE PRIVATE.
 
 ENDCLASS.
 
-CLASS lcl_fizzbuzz IMPLEMENTATION.
+CLASS lcl_fizz_buzz IMPLEMENTATION.
 
   METHOD create.
-    ro_fizzbuzz = NEW lcl_fizzbuzz( ).
+    ro_fizzbuzz = NEW lcl_fizz_buzz( ).
   ENDMETHOD.
 
   METHOD run.
